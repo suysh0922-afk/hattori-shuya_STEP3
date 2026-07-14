@@ -1,0 +1,214 @@
+/* ==========================================
+   a: ページ全体の基本設定
+   ========================================== */
+   body {
+    background-color: #fafafa; /* 淡い背景色 */
+    color: #333333;           /* 黒・グレー系の文字色 */
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, sans-serif; /* 読みやすい書体 */
+    line-height: 1.8;          /* 広めの行間 */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* アンカーリンククリック時にスムーズにスクロール */
+}
+
+/* ==========================================
+   b: ヘッダーのデザイン
+   ========================================== */
+header {
+    background-color: #2e5c36; /* 教材の画像に合わせた深緑色 */
+    color: #ffffff;           /* 白文字 */
+    text-align: center;        /* 中央揃え */
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.catchphrase {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;          /* ナビゲーションを横並びに */
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* ナビゲーションのホバー時 */
+header nav a:hover {
+    color: #a3c9a8; /* ホバー時に薄い緑色に変化 */
+}
+
+/* ==========================================
+   c: メイン・各セクションのデザイン
+   ========================================== */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-container {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* h2タグの下線デザイン */
+.section-container h2 {
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.section-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #2e5c36; /* 見出しの下線 */
+}
+
+/* 画像の角丸設定 */
+img {
+    border-radius: 8px; /* 画像の角丸 */
+    max-width: 100%;
+    height: auto;
+}
+
+/* About Us セクション */
+.about-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cafe-img {
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* メニュー一覧の横並びとカード風デザイン */
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* 画面が狭いときは折り返す */
+}
+
+.menu-card {
+    background-color: #ffffff;
+    flex: 1;
+    min-width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 軽い影でカード風に */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* アニメーションのスムーズさ */
+}
+
+/* メニューカードのホバー時（少し浮かび上がる） */
+.menu-card:hover {
+    transform: translateY(-5px); /* 上に少し動く */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 影を濃くする */
+}
+
+.menu-card h3 {
+    margin: 15px 0 0 0;
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   d: フォームのデザイン（見やすさ・余白の工夫）
+   ========================================== */
+.contact-form {
+    max-width: 500px; /* フォーム全体の幅を制限 */
+    margin: 0 auto;
+    text-align: left; /* 入力ラベルなどは左寄せに */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* 入力欄とボタンの幅を100%で揃える */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.submit-btn {
+    width: 100%;
+    box-sizing: border-box; /* paddingを含めたサイズ計算 */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2e5c36;
+    outline: none;
+}
+
+/* 送信ボタンの基本設定 */
+.submit-btn {
+    background-color: #2e5c36; /* 緑色の背景 */
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* ボタンのホバー時（少し濃くなる） */
+.submit-btn:hover {
+    background-color: #1e3d24; /* ホバー時に濃い緑色に */
+}
+
+/* ==========================================
+   e: フッターのデザイン
+   ========================================== */
+footer {
+    background-color: #1e3d24; /* 濃い色にしてページを締める */
+    color: #ffffff;           /* 白文字 */
+    text-align: center;        /* 中央揃え */
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}

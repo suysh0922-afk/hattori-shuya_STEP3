@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TNG CAFE</title>
+    <!-- 外部CSSファイルの読み込み -->
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+
+    <!-- ヘッダーセクション -->
+    <header>
+        <h1>TNG CAFE</h1>
+        <p class="catchphrase">心安らぐ一杯をあなたに</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- About Us セクション -->
+        <section id="about" class="section-container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>TNG Cafeは自然の香りに包まれたリラックス空間を提供しています。<br>自家焙煎コーヒーと手作りスイーツで、穏やかな時間をお過ごしください。</p>
+                <!-- 好きな画像（ダミー画像を設定しています） -->
+                <img src="images/cafe.jpg" alt="カフェの写真" class="cafe-img">
+            </div>
+        </section>
+
+        <!-- Menu セクション -->
+        <section id="menu" class="section-container">
+            <h2>Menu</h2>
+            <div class="menu-list">
+                <!-- メニューカード1 -->
+                <div class="menu-card">
+                    <img src="images/blend.jpg" alt="ブレンドコーヒー">
+                    <h3>ブレンドコーヒー</h3>
+                </div>
+                <!-- メニューカード2 -->
+                <div class="menu-card">
+                    <img src="images/cake.jpg" alt="ベイクドチーズケーキ">
+                    <h3>ベイクドチーズケーキ</h3>
+                </div>
+                <!-- メニューカード3 -->
+                <div class="menu-card">
+                    <img src="images/coffee.jpeg" alt="カフェラテ">
+                    <h3>カフェラテ</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact セクション -->
+        <section id="contact" class="section-container">
+            <h2>Contact</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label prejudices_for="name">お名前</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label prejudices_for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label prejudices_for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">送信</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- フッターセクション -->
+    <footer>
+        <p>&copy; 2011 TNG Cafe</p>
+    </footer>
+
+</body>
+</html>
